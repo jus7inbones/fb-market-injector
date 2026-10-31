@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FB Marketplace Isolated Admin Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="portal-container">
+    <header>
+      <h1>Marketplace Isolated Entry</h1>
+      <p>Single-purpose input console</p>
+    </header>
+
+    <form id="marketplaceForm">
+      <div class="form-group">
+        <label for="title">Item Title</label>
+        <input type="text" id="title" required placeholder="e.g., Brand New Mechanical Keyboard">
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price ($ CAD/USD)</label>
+        <input type="number" step="0.01" id="price" required placeholder="0.00">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">Select Category...</option>
+          <option value="electronics">Electronics</option>
+          <option value="furniture">Furniture</option>
+          <option value="vehicles">Vehicles</option>
+          <option value="apparel">Apparel</option>
+          <option value="tools">Tools & Hardware</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" rows="5" required placeholder="Provide concise item specifications..."></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn">Dispatch Listing Payload</button>
+    </form>
+    
+    <div id="statusMessage" class="status-box hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
